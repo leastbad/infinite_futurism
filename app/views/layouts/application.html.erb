@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Infinite Futurism</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
+
+    <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css">
+  </head>
+
+  <body>
+    <header class="container">
+      <strong><%= link_to "Infinite Futurism", root_path %></strong>
+    </header>
+    <main class="container">
+      <% if notice %><section><%= notice %></section><% end %>
+      <%= yield %>
+    </main>
+    <footer class="container">
+      &copy; 2022 leastbad
+    </footer>
+  </body>
+</html>
